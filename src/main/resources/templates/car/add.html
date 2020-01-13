@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add car</title>
+</head>
+<body>
+<a href="/car/list">List all cars</a>
+<form action="/car/save" th:object="${myCar}" method="post">
+    <p>Name: <input th:field="*{name}" type="text"/></p>
+    <p>Horse power: <input th:field="*{hp}" type="text"/></p>
+    <p><input type="submit" value="Save"/></p>
+</form>
+</body>
+</html>
